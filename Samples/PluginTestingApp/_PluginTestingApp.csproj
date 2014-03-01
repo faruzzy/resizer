@@ -60,6 +60,78 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\freetype6.dll">
+      <Link>freetype6.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\GDwrap.dll">
+      <Link>GDwrap.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\glut32.dll">
+      <Link>glut32.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\jpeg62.dll">
+      <Link>jpeg62.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\libgd.3.0.1.dll">
+      <Link>libgd.3.0.1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\libgd.dll">
+      <Link>libgd.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\libimage.dll">
+      <Link>libimage.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\libpng12.dll">
+      <Link>libpng12.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\libpng13.dll">
+      <Link>libpng13.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\libpng3.dll">
+      <Link>libpng3.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\librle3.dll">
+      <Link>librle3.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\libtiff3.dll">
+      <Link>libtiff3.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\net-gd-glue.dll">
+      <Link>net-gd-glue.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\net-gd.dll">
+      <Link>net-gd.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\nunit-console-runner.dll">
+      <Link>nunit-console-runner.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\nunit-gui-runner.dll">
+      <Link>nunit-gui-runner.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\xpm4.dll">
+      <Link>xpm4.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Plugins\Libs\Gd\net-gd\zlib1.dll">
+      <Link>zlib1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="griddata.js" />
     <Content Include="filters.js" />
     <Content Include="css\demo.css" />
@@ -186,6 +258,10 @@
       <Project>{8e863afe-b4cf-46aa-8382-0c3547c0ede9}</Project>
       <Name>ImageResizer.Plugins.FreeImage</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Plugins\Gd\ImageResizer.Plugins.Gd.csproj">
+      <Project>{465e78de-26c2-4892-9d5a-eb47517beb87}</Project>
+      <Name>ImageResizer.Plugins.Gd</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Plugins\ImageStudio\ImageResizer.Plugins.ImageStudio.csproj">
       <Project>{987e8b0f-0658-48e8-b323-6399c159bbd5}</Project>
       <Name>ImageResizer.Plugins.ImageStudio</Name>
@@ -261,10 +337,6 @@
     <ProjectReference Include="..\..\Plugins\Wic\ImageResizer.Plugins.Wic.csproj">
       <Project>{4a55b40d-1e0d-4d1f-8d96-25f624847e53}</Project>
       <Name>ImageResizer.Plugins.Wic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Tests\ImageResizer.Plugins.DiskCache.Tests\ImageResizer.Plugins.DiskCache.Tests.csproj">
-      <Project>{b4c23dcb-4247-4647-a01c-ad829ec31dfa}</Project>
-      <Name>ImageResizer.Plugins.DiskCache.Tests</Name>
     </ProjectReference>
     <ProjectReference Include="..\CustomOverlayPlugin\ImageResizer.Plugins.CustomOverlay.csproj">
       <Project>{589abebc-e5ee-47bf-8360-c799f714ba7f}</Project>

@@ -1,0 +1,472 @@
+<html>
+  <head>
+    <title>GD.Rect</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">net-gd</a> : <a href="index.html">GD Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:GD.Rect">Overview</a>
+      </p>
+      <p>
+        <a href="#T:GD.Rect:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:GD.Rect:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:GD.Rect:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:GD.Rect">Rect  Class</h1>
+    <p class="Summary" id="T:GD.Rect:Summary">
+            Represents a quadrilateral, typically the bounding rectangle
+            of a region of text.  Since this rectangle may be rotated,
+            there is no checking to ensure that this is actually a
+            rectangle.  This class is rarely used.
+            </p>
+    <div id="T:GD.Rect:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public class  <b>Rect</b></div>
+    </div>
+    <div class="Remarks" id="T:GD.Rect:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:GD.Rect:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:GD.Rect:Docs:Version Information">
+        <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:GD.Rect(System.Int32[])">Rect</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[])</div>
+                </td>
+                <td> Constructor; creates from list of integer points. </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:GD.Rect(GD.Point,GD.Point,GD.Point,GD.Point)">Rect</a>
+                    </b>(<a href="../GD/Point.html">Point</a>, <a href="../GD/Point.html">Point</a>, <a href="../GD/Point.html">Point</a>, <a href="../GD/Point.html">Point</a>)</div>
+                </td>
+                <td> Constructor; creates Point coordinates. </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:GD.Rect.bottomLeft">bottomLeft</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GD/Point.html">Point</a>
+                  </i>.  bottom-left corner </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:GD.Rect.bottomRight">bottomRight</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GD/Point.html">Point</a>
+                  </i>.  bottom-right corner </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:GD.Rect.topLeft">topLeft</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GD/Point.html">Point</a>
+                  </i>.  top-left corner </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:GD.Rect.topRight">topRight</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GD/Point.html">Point</a>
+                  </i>.  top-right corner </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:GD.Rect:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:GD.Rect(System.Int32[])">Rect Constructor</h3>
+        <blockquote id="C:GD.Rect(System.Int32[]):member">
+          <p class="Summary"> Constructor; creates from list of integer points. </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Rect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[] pts)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:GD.Rect(System.Int32[]):Parameters">
+            <dl>
+              <dt>
+                <i>pts</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:GD.Rect(System.Int32[]):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:GD.Rect(System.Int32[]):Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="C:GD.Rect(GD.Point,GD.Point,GD.Point,GD.Point)">Rect Constructor</h3>
+        <blockquote id="C:GD.Rect(GD.Point,GD.Point,GD.Point,GD.Point):member">
+          <p class="Summary"> Constructor; creates Point coordinates. </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Rect</b> (<a href="../GD/Point.html">Point</a> topLeft, <a href="../GD/Point.html">Point</a> topRight, <a href="../GD/Point.html">Point</a> bottomLeft, <a href="../GD/Point.html">Point</a> bottomRight)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:GD.Rect(GD.Point,GD.Point,GD.Point,GD.Point):Parameters">
+            <dl>
+              <dt>
+                <i>topLeft</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>topRight</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>bottomLeft</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>bottomRight</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:GD.Rect(GD.Point,GD.Point,GD.Point,GD.Point):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:GD.Rect(GD.Point,GD.Point,GD.Point,GD.Point):Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:GD.Rect.bottomLeft">bottomLeft Property</h3>
+        <blockquote id="P:GD.Rect.bottomLeft:member">
+          <p class="Summary"> bottom-left corner </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../GD/Point.html">Point</a> <b>bottomLeft</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:GD.Rect.bottomLeft:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:GD.Rect.bottomLeft:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:GD.Rect.bottomLeft:Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:GD.Rect.bottomRight">bottomRight Property</h3>
+        <blockquote id="P:GD.Rect.bottomRight:member">
+          <p class="Summary"> bottom-right corner </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../GD/Point.html">Point</a> <b>bottomRight</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:GD.Rect.bottomRight:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:GD.Rect.bottomRight:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:GD.Rect.bottomRight:Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:GD.Rect.topLeft">topLeft Property</h3>
+        <blockquote id="P:GD.Rect.topLeft:member">
+          <p class="Summary"> top-left corner </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../GD/Point.html">Point</a> <b>topLeft</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:GD.Rect.topLeft:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:GD.Rect.topLeft:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:GD.Rect.topLeft:Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:GD.Rect.topRight">topRight Property</h3>
+        <blockquote id="P:GD.Rect.topRight:member">
+          <p class="Summary"> top-right corner </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../GD/Point.html">Point</a> <b>topRight</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:GD.Rect.topRight:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:GD.Rect.topRight:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:GD.Rect.topRight:Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

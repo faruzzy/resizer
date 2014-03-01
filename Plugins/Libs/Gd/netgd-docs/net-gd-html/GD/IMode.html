@@ -1,0 +1,366 @@
+<html>
+  <head>
+    <title>GD.IMode</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">net-gd</a> : <a href="index.html">GD Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:GD.IMode">Overview</a>
+      </p>
+      <p>
+        <a href="#T:GD.IMode:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:GD.IMode:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:GD.IMode:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:GD.IMode">IMode  Enum</h1>
+    <p class="Summary" id="T:GD.IMode:Summary">
+            Enumeration of all interpolation methods.
+            </p>
+    <div id="T:GD.IMode:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public enum <b>IMode</b></div>
+    </div>
+    <div class="Remarks" id="T:GD.IMode:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:GD.IMode:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Members</h2>
+      <div class="SectionBox" id="T:GD.IMode:Docs:Members">
+        <table class="Enumeration">
+          <tr>
+            <th>Member Name</th>
+            <th>Description</th>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Bell">
+              <b>Bell</b>
+            </td>
+            <td> Bell </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Bessel">
+              <b>Bessel</b>
+            </td>
+            <td> Bessel </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Bicubic">
+              <b>Bicubic</b>
+            </td>
+            <td> Bicubic </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.BicubicFixed">
+              <b>BicubicFixed</b>
+            </td>
+            <td> BicubicFixed </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.BilinearFixed">
+              <b>BilinearFixed</b>
+            </td>
+            <td> BilinearFixed </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Blackman">
+              <b>Blackman</b>
+            </td>
+            <td> Blackman </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Box">
+              <b>Box</b>
+            </td>
+            <td> Box </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Bspline">
+              <b>Bspline</b>
+            </td>
+            <td> Bspline </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Catmullrom">
+              <b>Catmullrom</b>
+            </td>
+            <td> Catmullrom </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Default">
+              <b>Default</b>
+            </td>
+            <td> An alias for another mode. May change.  </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Gaussian">
+              <b>Gaussian</b>
+            </td>
+            <td> Gaussian </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.GeneralizedCubic">
+              <b>GeneralizedCubic</b>
+            </td>
+            <td> GeneralizedCubic </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Hamming">
+              <b>Hamming</b>
+            </td>
+            <td> Hamming </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Hanning">
+              <b>Hanning</b>
+            </td>
+            <td> Hanning </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Hermite">
+              <b>Hermite</b>
+            </td>
+            <td> Hermite </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Mitchell">
+              <b>Mitchell</b>
+            </td>
+            <td> Mitchell </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.NearestNeighbour">
+              <b>NearestNeighbour</b>
+            </td>
+            <td> NearestNeighbour </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Power">
+              <b>Power</b>
+            </td>
+            <td> Power </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Quadratic">
+              <b>Quadratic</b>
+            </td>
+            <td> Quadratic </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Sinc">
+              <b>Sinc</b>
+            </td>
+            <td> Sinc </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:GD.IMode.Triangle">
+              <b>Triangle</b>
+            </td>
+            <td> Triangle </td>
+          </tr>
+        </table>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:GD.IMode:Docs:Version Information">
+        <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+    </div>
+    <div class="Members" id="T:GD.IMode:Members">
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

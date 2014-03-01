@@ -1,0 +1,632 @@
+<html>
+  <head>
+    <title>GD.Affine</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">net-gd</a> : <a href="index.html">GD Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:GD.Affine">Overview</a>
+      </p>
+      <p>
+        <a href="#T:GD.Affine:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:GD.Affine:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:GD.Affine:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:GD.Affine">Affine  Class</h1>
+    <p class="Summary" id="T:GD.Affine:Summary">
+            Represents an affine transformation as implemented in
+            GD. (I.e. an array of 6 doubles.)
+            </p>
+    <div id="T:GD.Affine:Signature">
+      <h2>Syntax</h2>
+      <div class="Signature">public class  <b>Affine</b></div>
+    </div>
+    <div class="Remarks" id="T:GD.Affine:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:GD.Affine:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:GD.Affine:Docs:Version Information">
+        <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.boundingBoxFor(GD.TrueRect)">boundingBoxFor</a>
+                  </b>(<a href="../GD/TrueRect.html">TrueRect</a>)<nobr> : <a href="../GD/TrueRect.html">TrueRect</a></nobr><blockquote>
+            Return the bounding box of this transform on the given
+            rectangle.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.equalish(GD.Affine)">equalish</a>
+                  </b>(<a href="../GD/Affine.html">Affine</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>
+            Test for equality via gdAffineEqual(), which gives us
+            equality within a range defined in GD.  This is different
+            enough from what C# needs to make it ineligible for standard
+            object equality.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.expansion">expansion</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a></nobr><blockquote>Expansion value.  Wraps gdAffineExpansion(). </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.identity">identity</a>
+                  </b>()<nobr> : <a href="../GD/Affine.html">Affine</a></nobr><blockquote>Return an identity Affine. Wraps gdAffineIdentity().</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.rectilinear">rectilinear</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Test if rectilinear.  Wraps gdAffineRectilinear(). </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.rotate(System.Double)">rotate</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="../GD/Affine.html">Affine</a></nobr><blockquote>Return a rotate Affine. Wraps gdAffineRotate(). </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.scale(System.Double,System.Double)">scale</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="../GD/Affine.html">Affine</a></nobr><blockquote>Return a scale Affine. Wraps gdAffineScale(). </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.shearHorizontal(System.Double)">shearHorizontal</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="../GD/Affine.html">Affine</a></nobr><blockquote>Return a horizontal shear affine.
+            Wraps gdAffineShearHorizontal().</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.shearVertical(System.Double)">shearVertical</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="../GD/Affine.html">Affine</a></nobr><blockquote>Return a vertical shear affine.
+            Wraps gdAffineShearVertical().</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>static </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GD.Affine.translate(System.Double,System.Double)">translate</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)<nobr> : <a href="../GD/Affine.html">Affine</a></nobr><blockquote>Return a translation Affine. See gdAffineTranslate().</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:GD.Affine:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="M:GD.Affine.boundingBoxFor(GD.TrueRect)">boundingBoxFor Method</h3>
+        <blockquote id="M:GD.Affine.boundingBoxFor(GD.TrueRect):member">
+          <p class="Summary">
+            Return the bounding box of this transform on the given
+            rectangle.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../GD/TrueRect.html">TrueRect</a> <b>boundingBoxFor</b> (<a href="../GD/TrueRect.html">TrueRect</a> src)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.boundingBoxFor(GD.TrueRect):Parameters">
+            <dl>
+              <dt>
+                <i>src</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.boundingBoxFor(GD.TrueRect):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.boundingBoxFor(GD.TrueRect):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.boundingBoxFor(GD.TrueRect):Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GD.Affine.equalish(GD.Affine)">equalish Method</h3>
+        <blockquote id="M:GD.Affine.equalish(GD.Affine):member">
+          <p class="Summary">
+            Test for equality via gdAffineEqual(), which gives us
+            equality within a range defined in GD.  This is different
+            enough from what C# needs to make it ineligible for standard
+            object equality.
+            </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>equalish</b> (<a href="../GD/Affine.html">Affine</a> a)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.equalish(GD.Affine):Parameters">
+            <dl>
+              <dt>
+                <i>a</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.equalish(GD.Affine):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.equalish(GD.Affine):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.equalish(GD.Affine):Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GD.Affine.expansion">expansion Method</h3>
+        <blockquote id="M:GD.Affine.expansion:member">
+          <p class="Summary">Expansion value.  Wraps gdAffineExpansion(). </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>expansion</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.expansion:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.expansion:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.expansion:Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GD.Affine.identity">identity Method</h3>
+        <blockquote id="M:GD.Affine.identity:member">
+          <p class="Summary">Return an identity Affine. Wraps gdAffineIdentity().</p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../GD/Affine.html">Affine</a> <b>identity</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.identity:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.identity:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.identity:Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GD.Affine.rectilinear">rectilinear Method</h3>
+        <blockquote id="M:GD.Affine.rectilinear:member">
+          <p class="Summary">Test if rectilinear.  Wraps gdAffineRectilinear(). </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>rectilinear</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.rectilinear:Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.rectilinear:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.rectilinear:Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GD.Affine.rotate(System.Double)">rotate Method</h3>
+        <blockquote id="M:GD.Affine.rotate(System.Double):member">
+          <p class="Summary">Return a rotate Affine. Wraps gdAffineRotate(). </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../GD/Affine.html">Affine</a> <b>rotate</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> angle)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.rotate(System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>angle</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.rotate(System.Double):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.rotate(System.Double):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.rotate(System.Double):Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GD.Affine.scale(System.Double,System.Double)">scale Method</h3>
+        <blockquote id="M:GD.Affine.scale(System.Double,System.Double):member">
+          <p class="Summary">Return a scale Affine. Wraps gdAffineScale(). </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../GD/Affine.html">Affine</a> <b>scale</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> scale_x, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> scale_y)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.scale(System.Double,System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>scale_x</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>scale_y</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.scale(System.Double,System.Double):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.scale(System.Double,System.Double):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.scale(System.Double,System.Double):Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GD.Affine.shearHorizontal(System.Double)">shearHorizontal Method</h3>
+        <blockquote id="M:GD.Affine.shearHorizontal(System.Double):member">
+          <p class="Summary">Return a horizontal shear affine.
+            Wraps gdAffineShearHorizontal().</p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../GD/Affine.html">Affine</a> <b>shearHorizontal</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> angle)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.shearHorizontal(System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>angle</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.shearHorizontal(System.Double):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.shearHorizontal(System.Double):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.shearHorizontal(System.Double):Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GD.Affine.shearVertical(System.Double)">shearVertical Method</h3>
+        <blockquote id="M:GD.Affine.shearVertical(System.Double):member">
+          <p class="Summary">Return a vertical shear affine.
+            Wraps gdAffineShearVertical().</p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../GD/Affine.html">Affine</a> <b>shearVertical</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> angle)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.shearVertical(System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>angle</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.shearVertical(System.Double):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.shearVertical(System.Double):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.shearVertical(System.Double):Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GD.Affine.translate(System.Double,System.Double)">translate Method</h3>
+        <blockquote id="M:GD.Affine.translate(System.Double,System.Double):member">
+          <p class="Summary">Return a translation Affine. See gdAffineTranslate().</p>
+          <h2>Syntax</h2>
+          <div class="Signature">public static <a href="../GD/Affine.html">Affine</a> <b>translate</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> offset_x, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> offset_y)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.translate(System.Double,System.Double):Parameters">
+            <dl>
+              <dt>
+                <i>offset_x</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>offset_y</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GD.Affine.translate(System.Double,System.Double):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GD.Affine.translate(System.Double,System.Double):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GD.Affine.translate(System.Double,System.Double):Version Information">
+            <b>Namespace: </b>GD<br /><b>Assembly: </b>net-gd (in net-gd.dll)<br /><b>Assembly Versions: </b>0.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
