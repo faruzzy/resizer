@@ -557,5 +557,21 @@ namespace ImageResizer.Configuration {
                 _authorizeAllImages = value;
             }
         }
+
+
+        public IAsyncTyrantCache GetAsyncCacheFor(HttpContext context, IAsyncResponsePlan plan)
+        {
+            IAsyncTyrantCache defaultCache = null;
+            //Grab the last cache that claims it can process the request.
+            foreach (IAsyncTyrantCache cache in c.Plugins.GetAll<IAsyncTyrantCache>())
+            {
+                if (cache.CanProcess(context, plan))
+                {
+                    defaultCache = cache;
+                }
+            }
+
+            return defaultCache;
+        }
     }
 }
