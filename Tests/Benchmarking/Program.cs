@@ -16,6 +16,7 @@ using ImageResizer.Plugins.Basic;
 using ImageResizer.Plugins.Watermark;
 using ImageResizer.Encoding;
 using ImageResizer.ExtensionMethods;
+using ImageResizer.Plugins.FastScaling;
 
 namespace Bench {
     class Program {
@@ -25,6 +26,7 @@ namespace Bench {
             Config c = new Config();
             new PrettyGifs().Install(c);
             WatermarkPlugin w = (WatermarkPlugin)new WatermarkPlugin().Install(c);
+
             w.OtherImages.Path = imageDir;
 
             Console.WindowWidth = 200;
@@ -34,18 +36,53 @@ namespace Bench {
             string s = c.GetDiagnosticsPage();
             c.BuildImage(imageDir + "quality-original.jpg", "grass.gif", "rotate=3&width=600&format=gif&colors=128&watermark=Sun_256.png");
 
-            CompareFreeImageDecoderToDefault();
+            new FastScalingPlugin().Install(c);
+            c.BuildImage(imageDir + "quality-original.jpg", "grass-fast.jpg", "width=600");
 
-            CompareFreeImageEncoderToDefault();
+
+            EvaluateFastScalingPlugin();
            
 
-            CompareFreeImageToDefault();
-
-            EvaluateSpeedPlugin();
+            
             Console.ReadKey();
         }
 
+        public static void EvaluateFastScalingPlugin()
+        {
 
+            var images = new string[] {imageDir + "large.jpg", imageDir + "quality-original.jpg", imageDir + "fountain-small.jpg"}.Where((s) => File.Exists(s));
+            
+            Config c1 = new Config();
+            new FastScalingPlugin().Install(c1);
+            Config c2 = new Config();
+
+            Console.WriteLine();
+            Console.WriteLine("Evaluating benefits of FastScaling plugin at various settings");
+
+            foreach (string s in images)
+            {
+                foreach (Config c in new Config[] { c1, c2 })
+                {
+                    Console.WriteLine("In-memory resize of " + ImageInfo(s) + (c == c1 ? " using FastScaling " : " using GDI+ DrawImage"));
+                    for (int rez = 100; rez < 800; rez += 200)
+                    {
+
+
+                        ResizeSettings set = new ResizeSettings();
+                        set.MaxWidth = rez;
+                        set.MaxHeight = rez;
+                        Console.WriteLine(rez + "x" + rez + ", avg resize time=" + BenchmarkInMemory(c, s, set, false, true, true, 10) + ", avg total=" + BenchmarkInMemory(c, s, set, false, false, false, 5));
+
+
+                        Console.WriteLine();
+                    }
+                }
+            }
+
+
+
+
+        }
         public static void EvaluateSpeedPlugin() {
             
             string[] images = new string[] { "2758U_02.jpg","2758U_02.tif","27520_96.jpg","27520_96.tif","27586_33.jpg","27586_33.tif" };

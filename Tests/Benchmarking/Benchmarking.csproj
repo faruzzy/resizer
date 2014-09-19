@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -40,6 +40,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -95,6 +96,10 @@
     <ProjectReference Include="..\..\Plugins\FreeImage\ImageResizer.Plugins.FreeImage.csproj">
       <Project>{8E863AFE-B4CF-46AA-8382-0C3547C0EDE9}</Project>
       <Name>ImageResizer.Plugins.FreeImage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Plugins\ImageResizer.Plugins.FastScaling\ImageResizer.Plugins.FastScaling.vcxproj">
+      <Project>{9b97d952-2969-4f46-9758-9e712cdf3f72}</Project>
+      <Name>ImageResizer.Plugins.FastScaling</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Plugins\Libs\FreeImage\Wrapper\FreeImage.NET\cs\Library\WrapperFreeImage.NET.csproj">
       <Project>{6598A7CD-8F27-4D3F-A675-5AE63113A7C3}</Project>
