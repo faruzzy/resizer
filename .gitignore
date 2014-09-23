@@ -46,3 +46,6 @@ NuGet.exe
 *.opensdf
 *.unsuccessfulbuild
 ipch/
+*.tlog
+*.metagen
+*.lastbuildstate
